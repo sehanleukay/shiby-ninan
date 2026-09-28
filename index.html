@@ -286,14 +286,14 @@ footer a:hover{color:var(--on-dark)}
     <a href="#top" class="logo" aria-label="Dr Shiby Ninan, home"><span class="mono">SN</span><span><b>Dr Shiby Ninan</b><small>Plastic &amp; Reconstructive Surgery</small></span></a>
     <ul class="links">
       <li><a href="#about">About</a></li><li><a href="#procedures">Procedures</a></li><li><a href="#humanitarian">Humanitarian</a></li>
-      <li><a href="#locations">Locations</a></li><li><a href="#stories">Patient Stories</a></li>
+      <li><a href="#locations">Locations</a></li>
     </ul>
     <a href="#contact" class="btn btn-dark nav-cta">Book a consultation</a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg></button>
   </div>
 </nav>
 <div class="mobile" id="mobile" aria-hidden="true">
-  <a href="#about">About</a><a href="#procedures">Procedures</a><a href="#humanitarian">Humanitarian</a><a href="#locations">Locations</a><a href="#stories">Patient Stories</a>
+  <a href="#about">About</a><a href="#procedures">Procedures</a><a href="#humanitarian">Humanitarian</a><a href="#locations">Locations</a>
   <a href="#contact" class="btn btn-dark">Book a consultation</a>
 </div>
 
@@ -403,19 +403,6 @@ footer a:hover{color:var(--on-dark)}
   </div>
 </section>
 
-<section class="stories" id="stories">
-  <div class="wrap">
-    <span class="eyebrow rv">Patient Stories</span>
-    <h2 class="rv d1">Words from those we’ve <em>cared for</em></h2>
-    <div class="story-stage rv d2">
-      <div class="qmark" aria-hidden="true">“</div>
-      <div>
-        <figure class="story on" style="margin:0"><blockquote>Dr Ninan made me feel completely at ease from the very first consultation. Her honesty about what was realistic, and the result she achieved, gave me my confidence back after my mastectomy.</blockquote><cite><b>Sarah M.</b>Breast Reconstruction · Sydney</cite></figure><figure class="story" style="margin:0"><blockquote>I travelled from Brisbane for my consultation because of Dr Ninan&#x27;s reputation, and it was absolutely worth it. The team at every location is warm, professional, and genuinely caring.</blockquote><cite><b>Tamara L.</b>Facelift · Melbourne Clinic</cite></figure><figure class="story" style="margin:0"><blockquote>The care I received for my skin cancer removal and reconstruction was exceptional. Dr Ninan explained every step and the scar is barely visible. I couldn&#x27;t be happier.</blockquote><cite><b>Robert K.</b>Skin Cancer Reconstruction · Gold Coast</cite></figure>
-        <div class="snav" role="group" aria-label="Choose a story"><button aria-label="Story 1" aria-pressed="true"></button><button aria-label="Story 2" aria-pressed="false"></button><button aria-label="Story 3" aria-pressed="false"></button></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="cta" id="contact">
   <div class="wrap">
@@ -483,12 +470,6 @@ footer a:hover{color:var(--on-dark)}
   fbtns.forEach(function(b){ b.onclick = function(){ fbtns.forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
     document.querySelectorAll('.loc').forEach(function(l){ l.hidden = b.dataset.f !== 'all' && l.dataset.r !== b.dataset.f; }); }; });
 
-  // stories
-  var st = document.querySelectorAll('.story'), sb = document.querySelectorAll('.snav button'), si = 0, stimer;
-  function story(n){ si = (n + st.length) % st.length; st.forEach(function(s, i){ s.classList.toggle('on', i === si); }); sb.forEach(function(b, i){ b.setAttribute('aria-pressed', i === si); });
-    clearTimeout(stimer); if(!reduced) stimer = setTimeout(function(){ story(si + 1); }, 8000); }
-  sb.forEach(function(b, i){ b.onclick = function(){ story(i); }; });
-  story(0);
   var arch = document.getElementById('arch'); setTimeout(function(){ arch.classList.add('in'); }, 60);
 })();
 </script>
