@@ -88,7 +88,7 @@ body.menu-open nav.top{background:var(--bg);box-shadow:none}
 .stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(1.5rem,4vw,3.5rem);margin-top:3.2rem;padding-top:1.8rem;border-top:1px solid var(--line)}
 .stats b{display:block;font:500 clamp(2.3rem,4vw,3.1rem)/1.08 var(--serif);color:var(--ink)}
 .stats span{font-size:.8rem;color:var(--muted);letter-spacing:.04em}
-.arch-wrap{position:relative;justify-self:center;width:min(100%,330px)}
+.arch-wrap{position:relative;justify-self:center;width:min(100%,390px)}
 .arch{position:relative;aspect-ratio:4/4.8;border-radius:18px;overflow:hidden;background:var(--bg2);box-shadow:0 1px 2px rgba(46,40,51,.04),0 18px 40px -28px rgba(46,40,51,.22)}
 .arch img{width:100%;height:100%;object-fit:cover;object-position:center 16%;transform:scale(1.03);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
 .arch-wrap.in .arch img{transform:scale(1)}
@@ -348,7 +348,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .lead{font-size:1rem}
   .eyebrow{font-size:.74rem}
   /* hero: text first, then a compact profile card */
-  .hero{padding-top:100px;padding-bottom:2.6rem;gap:1.6rem}
+  .hero{padding-top:96px;padding-bottom:2.6rem;gap:1.8rem}
   .hero h1{font-size:clamp(2.7rem,12vw,3.4rem);margin:1rem 0 1.1rem}
   .hero .lead{margin-bottom:1.6rem}
   .hero-actions{gap:.6rem}
@@ -356,7 +356,9 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;width:100%;margin-top:1.8rem;padding:1.1rem 1.1rem}
   .stats b{font-size:1.9rem}
   .stats span{display:block;font-size:.72rem;line-height:1.3;margin-top:.3rem}
-  .arch-wrap{order:1;width:100%!important;justify-self:stretch!important;margin-top:0!important;display:grid;grid-template-columns:128px 1fr;gap:1rem;align-items:center}
+  .arch-wrap{order:-1;width:100%!important;justify-self:stretch!important;margin-top:0!important;display:flex;flex-direction:column;align-items:flex-start;gap:.8rem}
+  .arch-wrap .arch{width:min(66%,250px)}
+  .arch-wrap .arch-cap{width:100%}
   .arch{border-radius:16px}
   .arch-cap{margin-top:0}
   .arch-cap b{font-size:1.25rem}
@@ -476,15 +478,15 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
         <span class="eyebrow rv">About Dr Ninan</span>
         <h2 class="rv d1">A surgeon who truly <em>listens.</em></h2>
         <p class="quote rv d2">Thorough consultations, honest advice, and outcomes aligned with <em>your</em> personal goals.</p>
-        <p class="rv d2">Dr Shiby migrated to Australia from India in 2006 and has been practising in the field of Plastic and Reconstructive Surgery since 1997. He has worked in his specialist field at the Royal Darwin Hospital, Queen Elizabeth Hospital in Adelaide and also the Royal Adelaide Hospital.</p>
+        <p class="rv d2">Dr Shiby has been practising in the field of Plastic and Reconstructive Surgery since 1997. He has worked in his specialist field at the Royal Darwin Hospital, Queen Elizabeth Hospital in Adelaide and also the Royal Adelaide Hospital.</p>
         <ul class="bio-points rv d2">
-          <li>Director of Plastic and Reconstructive Surgery at the Royal Darwin Hospital.</li>
+          <li>Former Director of Plastic and Reconstructive Surgery at the Royal Darwin Hospital.</li>
           <li>Senior lecturer with Flinders University since 2011.</li>
           <li>Instrumental in getting RDH accredited for training in Plastic &amp; Reconstructive Surgery by the RACS and Board of Plastic &amp; Reconstructive Surgery.</li>
           <li>Works with Volunteer Medical Mission doing Cleft lip and Palate procedures with Helping Children Smile.</li>
         </ul>
         <p class="rv d3">Dr Shiby performs elective surgeries in patients with, as examples, skin cancers and melanoma including sentinel node biopsies and lymph node clearance, compression neuropathy – carpal tunnel, cubital tunnel syndrome, Guyon’s canal release and ear surgery (otoplasty).</p>
-        <p class="rv d3">He also performs cosmetic surgeries such as breast augmentation and breast lift, abdominoplasty, facelift, brow lift and neck lift.</p>
+        <p class="rv d3">He also performs cosmetic surgeries such as breast augmentation and breast lift, abdominoplasty, brow lift and neck lift.</p>
         <p class="rv d3">With clinics across Adelaide, regional South Australia and Darwin, expert surgical care is always close to home. His approach is always patient-first: thorough consultations, honest advice, and outcomes aligned with your personal goals.</p>
         <div class="sig rv d3"><b>Shiby Ninan</b><span>MBBS · MS · FICS · FRACS (Plastics)</span></div>
       </div>
