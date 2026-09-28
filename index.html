@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F8F2EA; --bg2:#F0E7DB; --card:#FFFCF7; --ink:#4B3F35; --text:#5E5147; --muted:#83746A; --line:rgba(75,63,53,.10);
-  --dark:#EDE3D5; --dark2:#F3EBE0; --on-dark:#4B3F35; --on-dark-muted:#83746A; --dark-line:rgba(75,63,53,.11);
+  --bg:#FDFAF6; --bg2:#FAF4EC; --card:#FFFFFF; --ink:#4B3F35; --text:#5E5147; --muted:#83746A; --line:rgba(75,63,53,.09);
+  --dark:#F7F0E6; --dark2:#FAF5EE; --on-dark:#4B3F35; --on-dark-muted:#83746A; --dark-line:rgba(75,63,53,.11);
   --bronze:#B39466; --bronze-l:#B39466; --bronze-soft:rgba(179,148,102,.12);
   --btn:#8C7760; --btn-hover:#7C6852;
   --serif:"Instrument Serif","Cormorant Garamond",Georgia,"Times New Roman",serif;
@@ -269,17 +269,17 @@ footer a:hover{color:var(--on-dark)}
 
 
 /* ---- frosted glass ---- */
-:root{--glass:rgba(255,252,247,.56);--glass-strong:rgba(255,252,247,.72);--glass-line:rgba(255,255,255,.7);
-  --glass-shadow:0 10px 36px -12px rgba(120,92,62,.18),inset 0 1px 0 rgba(255,255,255,.75)}
+:root{--glass:rgba(255,255,255,.62);--glass-strong:rgba(255,255,255,.8);--glass-line:rgba(255,255,255,.85);
+  --glass-shadow:0 8px 30px -14px rgba(150,120,90,.16),inset 0 1px 0 rgba(255,255,255,.9)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--glass:rgba(40,32,26,.5);--glass-strong:rgba(40,32,26,.66);--glass-line:rgba(255,255,255,.08);--glass-shadow:0 10px 36px -12px rgba(0,0,0,.5)}}
 .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.6;animation:drift 28s ease-in-out infinite alternate}
-.aurora i:nth-child(1){width:52vw;height:52vw;left:-14vw;top:-10vw;background:#EAD3B0}
-.aurora i:nth-child(2){width:44vw;height:44vw;right:-12vw;top:22vh;background:#EFCFC3;animation-delay:-9s}
-.aurora i:nth-child(3){width:48vw;height:48vw;left:22vw;bottom:-22vw;background:#E3D6C3;animation-delay:-17s}
+.aurora i{position:absolute;border-radius:50%;filter:blur(100px);opacity:.38;animation:drift 28s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:52vw;height:52vw;left:-14vw;top:-10vw;background:#F2DFC2}
+.aurora i:nth-child(2){width:44vw;height:44vw;right:-12vw;top:22vh;background:#F5DCD3;animation-delay:-9s}
+.aurora i:nth-child(3){width:48vw;height:48vw;left:22vw;bottom:-22vw;background:#EFE5D6;animation-delay:-17s}
 @keyframes drift{to{transform:translate3d(6vw,4vh,0) scale(1.08)}}
 main,footer{position:relative;z-index:1}
-.procs,.human,.cta{background:color-mix(in srgb,var(--bg2) 42%,transparent)!important}
+.procs,.human,.cta{background:color-mix(in srgb,var(--bg2) 30%,transparent)!important}
 footer{background:color-mix(in srgb,var(--bg) 40%,transparent)!important}
 .glass,.pc,.practice,.practice.alt,.hosp,.member,.loclist,.arch-cap,.yrs{background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(1.35);backdrop-filter:blur(20px) saturate(1.35);border:1px solid var(--glass-line);box-shadow:var(--glass-shadow)}
 .panel{gap:14px;background:transparent;border:0;border-radius:0;overflow:visible}
