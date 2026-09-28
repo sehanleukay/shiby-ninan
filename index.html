@@ -2,6 +2,8 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FDFAF6">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dr Shiby Ninan — Plastic &amp; Reconstructive Surgery</title>
 <meta name="description" content="Dr Shiby Ninan, FRACS (Plastics). Plastic, reconstructive and cosmetic surgery across Adelaide, regional South Australia and Darwin.">
@@ -10,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
+  color-scheme:light only;
   --bg:#FDFAF6; --bg2:#FAF4EC; --card:#FFFFFF; --ink:#4B3F35; --text:#5E5147; --muted:#83746A; --line:rgba(75,63,53,.09);
   --dark:#F7F0E6; --dark2:#FAF5EE; --on-dark:#4B3F35; --on-dark-muted:#83746A; --dark-line:rgba(75,63,53,.11);
   --bronze:#B39466; --bronze-l:#B39466; --bronze-soft:rgba(179,148,102,.12);
@@ -20,16 +23,6 @@
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#141016; --bg2:#1B161E; --card:#1F1923; --ink:#F2EEE9; --text:#E4DFE6; --muted:#A39BA7; --line:rgba(242,238,233,.12);
-    --dark:#0E0B10; --dark2:#18131B; --bronze:#C9A57E; --bronze-l:#DDC2A2; --bronze-soft:rgba(201,165,126,.14);
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#141016; --bg2:#1B161E; --card:#1F1923; --ink:#F2EEE9; --text:#E4DFE6; --muted:#A39BA7; --line:rgba(242,238,233,.12);
-  --dark:#0E0B10; --dark2:#18131B; --bronze:#C9A57E; --bronze-l:#DDC2A2; --bronze-soft:rgba(201,165,126,.14);
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px)}
@@ -271,7 +264,6 @@ footer a:hover{color:var(--on-dark)}
 /* ---- frosted glass ---- */
 :root{--glass:rgba(255,255,255,.62);--glass-strong:rgba(255,255,255,.8);--glass-line:rgba(255,255,255,.85);
   --glass-shadow:0 8px 30px -14px rgba(150,120,90,.16),inset 0 1px 0 rgba(255,255,255,.9)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--glass:rgba(40,32,26,.5);--glass-strong:rgba(40,32,26,.66);--glass-line:rgba(255,255,255,.08);--glass-shadow:0 10px 36px -12px rgba(0,0,0,.5)}}
 .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .aurora i{position:absolute;border-radius:50%;filter:blur(100px);opacity:.38;animation:drift 28s ease-in-out infinite alternate}
 .aurora i:nth-child(1){width:52vw;height:52vw;left:-14vw;top:-10vw;background:#F2DFC2}
