@@ -267,6 +267,36 @@ footer a:hover{color:var(--on-dark)}
 @media (max-width:980px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.fgrid{grid-template-columns:1fr}}
 
+
+/* ---- frosted glass ---- */
+:root{--glass:rgba(255,252,247,.56);--glass-strong:rgba(255,252,247,.72);--glass-line:rgba(255,255,255,.7);
+  --glass-shadow:0 10px 36px -12px rgba(120,92,62,.18),inset 0 1px 0 rgba(255,255,255,.75)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--glass:rgba(40,32,26,.5);--glass-strong:rgba(40,32,26,.66);--glass-line:rgba(255,255,255,.08);--glass-shadow:0 10px 36px -12px rgba(0,0,0,.5)}}
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.6;animation:drift 28s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:52vw;height:52vw;left:-14vw;top:-10vw;background:#EAD3B0}
+.aurora i:nth-child(2){width:44vw;height:44vw;right:-12vw;top:22vh;background:#EFCFC3;animation-delay:-9s}
+.aurora i:nth-child(3){width:48vw;height:48vw;left:22vw;bottom:-22vw;background:#E3D6C3;animation-delay:-17s}
+@keyframes drift{to{transform:translate3d(6vw,4vh,0) scale(1.08)}}
+main,footer{position:relative;z-index:1}
+.procs,.human,.cta{background:color-mix(in srgb,var(--bg2) 42%,transparent)!important}
+footer{background:color-mix(in srgb,var(--bg) 40%,transparent)!important}
+.glass,.pc,.practice,.practice.alt,.hosp,.member,.loclist,.arch-cap,.yrs{background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(1.35);backdrop-filter:blur(20px) saturate(1.35);border:1px solid var(--glass-line);box-shadow:var(--glass-shadow)}
+.panel{gap:14px;background:transparent;border:0;border-radius:0;overflow:visible}
+.pc{border-radius:22px;transition:transform .35s,background .3s}
+.pc:hover{background:var(--glass-strong);transform:translateY(-3px)}
+.practice.alt{color:var(--ink)}
+.members{gap:14px;border-top:0}
+.member,.member:not(:nth-child(3n+1)),.member:nth-child(2n){padding:1.6rem 1.5rem;border-radius:20px;border-left:1px solid var(--glass-line)}
+.loclist{border-radius:24px;padding:0 1.6rem;border-top:1px solid var(--glass-line)}
+.loc:last-child{border-bottom:0}
+.arch-cap{padding:1rem 1.1rem;border-radius:16px;margin-top:.9rem}
+.filters button{background:var(--glass);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-color:var(--glass-line)}
+.stats{padding:1.4rem 1.6rem;border-radius:22px;border:1px solid var(--glass-line);background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(1.35);backdrop-filter:blur(20px) saturate(1.35);box-shadow:var(--glass-shadow);display:inline-grid}
+.tabs{border-bottom-color:var(--glass-line)}
+@media (prefers-reduced-motion: reduce){.aurora i{animation:none}}
+@media (max-width:980px){.loclist{padding:0 1.1rem}}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -281,6 +311,7 @@ footer a:hover{color:var(--on-dark)}
 </head>
 <body>
 <div class="statusfill" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
 <nav class="top" id="nav">
   <div class="wrap in">
     <a href="#top" class="logo" aria-label="Dr Shiby Ninan, home"><span class="mono">SN</span><span><b>Dr Shiby Ninan</b><small>Plastic &amp; Reconstructive Surgery</small></span></a>
