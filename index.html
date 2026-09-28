@@ -331,6 +331,81 @@ footer{background:color-mix(in srgb,var(--bg) 40%,transparent)!important}
 .enq-done p{color:var(--muted);margin:0 auto 1.6rem;max-width:36ch}
 @media (max-width:980px){.cta-grid{grid-template-columns:1fr}.frow{grid-template-columns:1fr;gap:0}}
 
+
+/* numbers: clean full-height figures */
+.stats b,.yrs b,.timeline .yr{font-family:var(--sans)!important;font-weight:300!important;letter-spacing:-.02em}
+.timeline .yr{font-size:1.35rem}
+/* ---- mobile ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.mcta{display:none}
+@media (max-width:640px){
+  .about,.procs,.human,.locs,.cta{padding-top:3.8rem!important;padding-bottom:3.8rem!important}
+  h2{font-size:clamp(2.3rem,9vw,2.9rem)}
+  .lead{font-size:1rem}
+  .eyebrow{font-size:.74rem}
+  /* hero: text first, then a compact profile card */
+  .hero{padding-top:100px;padding-bottom:2.6rem;gap:1.6rem}
+  .hero h1{font-size:clamp(2.7rem,12vw,3.4rem);margin:1rem 0 1.1rem}
+  .hero .lead{margin-bottom:1.6rem}
+  .hero-actions{gap:.6rem}
+  .hero-actions .btn{flex:1 1 100%;justify-content:center;padding:1rem}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;width:100%;margin-top:1.8rem;padding:1.1rem 1.1rem}
+  .stats b{font-size:1.9rem}
+  .stats span{display:block;font-size:.72rem;line-height:1.3;margin-top:.3rem}
+  .arch-wrap{order:1;width:100%!important;justify-self:stretch!important;margin-top:0!important;display:grid;grid-template-columns:128px 1fr;gap:1rem;align-items:center}
+  .arch{border-radius:16px}
+  .arch-cap{margin-top:0}
+  .arch-cap b{font-size:1.25rem}
+  .yrs{left:7px;top:7px;padding:.3rem .5rem .3rem .45rem;gap:.35rem;border-radius:10px}
+  .yrs b{font-size:1.15rem}
+  .yrs span{font-size:.5rem}
+  /* credentials */
+  .members{grid-template-columns:1fr 1fr!important;gap:10px;margin-top:3rem}
+  .member,.member:not(:nth-child(3n+1)),.member:nth-child(2n){padding:1rem .95rem!important;border-radius:16px}
+  .member b{font-size:1.6rem}
+  .member h3{font-size:.8rem;line-height:1.3;margin:.45rem 0 .15rem}
+  .member span{font-size:.72rem}
+  .quote{font-size:1.6rem}
+  /* swipeable tabs & filters */
+  .tabs,.filters{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:calc(-1 * var(--pad));margin-right:calc(-1 * var(--pad));padding-left:var(--pad);padding-right:var(--pad)}
+  .tabs::-webkit-scrollbar,.filters::-webkit-scrollbar{display:none}
+  .tab{flex:none;font-size:1.3rem;padding:.9rem 1rem 1rem 0}
+  .filters button{flex:none;min-height:40px}
+  .pc{padding:1.5rem 1.3rem}
+  .pc h3{font-size:1.55rem;margin:.5rem 0 .8rem}
+  /* locations */
+  .practices{margin:2rem 0 2.2rem;gap:.8rem}
+  .practice{padding:1.4rem}
+  .practice h3{font-size:1.85rem}
+  .practice a.mail{padding:.4rem 0;font-size:.88rem;word-break:break-all}
+  .loclist{padding:0 1rem}
+  .loc{padding:1rem 0;gap:.2rem .9rem}
+  .loc h3{font-size:1.3rem}
+  .loc h3 small{font-size:.64rem}
+  .loc address{font-size:.85rem}
+  .loc .type{font-size:.78rem;color:var(--muted)}
+  /* humanitarian */
+  .human-facts{gap:1.6rem}
+  .human-facts b{font-size:1.6rem}
+  .gallery{max-width:none;border-radius:16px}
+  /* contact */
+  .cta-direct a{padding:.45rem 0;font-size:.88rem;word-break:break-all}
+  .enq{padding:1.2rem;border-radius:20px}
+  .consent{font-size:.85rem}
+  /* footer */
+  footer{padding:3rem 0 6.5rem}
+  .fgrid{grid-template-columns:1fr 1fr!important;gap:2rem 1.2rem}
+  .fgrid > div:first-child,.fgrid > div:last-child{grid-column:1 / -1}
+  footer li a{display:block;padding:.3rem 0;font-size:.86rem}
+  .fbot{flex-direction:column;margin-top:2.2rem}
+  .fbot div a{padding:.4rem 0}
+  /* floating book button */
+  .mcta{display:flex;position:fixed;left:14px;right:14px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;justify-content:center;align-items:center;gap:.6rem;
+    padding:1rem;border-radius:999px;background:var(--btn);color:#fff;text-decoration:none;font:500 1rem var(--sans);box-shadow:0 14px 34px -12px rgba(90,70,50,.55);
+    transform:translateY(160%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+  .mcta.show{transform:none}
+}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -514,6 +589,7 @@ footer{background:color-mix(in srgb,var(--bg) 40%,transparent)!important}
 </section>
 </main>
 
+<a href="#contact" class="mcta" id="mcta">Book a consultation <span aria-hidden="true">→</span></a>
 <footer>
   <div class="wrap">
     <div class="fgrid">
@@ -603,6 +679,12 @@ footer{background:color-mix(in srgb,var(--bg) 40%,transparent)!important}
       .then(function(){ btn.disabled = false; btn.firstChild.textContent = 'Send enquiry '; });
   });
   document.getElementById('enqAgain').onclick = function(){ form.reset(); note(); form.querySelector('.enq-body').hidden = false; form.querySelector('.enq-done').hidden = true; };
+
+  // floating book button on phones: show after the hero, hide at the form
+  var mcta = document.getElementById('mcta'), atForm = false;
+  new IntersectionObserver(function(es){ atForm = es[0].isIntersecting; tick(); }, { threshold:.05 }).observe(document.getElementById('contact'));
+  function tick(){ mcta.classList.toggle('show', scrollY > innerHeight * .9 && !atForm); }
+  addEventListener('scroll', tick, { passive:true });
   var arch = document.getElementById('arch'); setTimeout(function(){ arch.classList.add('in'); }, 60);
 })();
 </script>
